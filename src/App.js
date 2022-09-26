@@ -15,96 +15,37 @@ import Classhistory from './component/Classhistory';
 import Videolearn from './component/Videolearn';
 import ChoosePlan from './component/ChoosePlan';
 import Profile from './component/Profile';
+import Checkout from './component/Checkout';
+
 
 function App() {
 
   return (
     <>
-    <Router>
-      
-    </Router>
-    <div>
     <Navbar/>
+   
+      <div className='container-fluid row row-offcanvas row-offcanvas-left' id='main'><Sidebar/> <Dashboard/> </div>
+
+      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/><Dashboardhomepage/></div>
+
+      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <TrailDone/></div>
+
+    <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <Bookdate/></div>
+
+    <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <BookingSummary/></div>
+
+    <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <Classhistory/></div>
+
+     <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <Videolearn/></div>
+
+      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <ChoosePlan/></div>
+
+      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <Profile/></div>
+
+      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Checkout/></div>
+
   
-      <div class="container-fluid" id="main">
-      <div class="row row-offcanvas row-offcanvas-left">
-      <Sidebar/>
-      <Dashboard/>
-      </div>
-      </div>
-</div>   
-   <div>
-   <Navbar/>
-     <div class="container-fluid" id="main">
-     <div class="row row-offcanvas row-offcanvas-left">
-     <Sidebar/>
-     <Dashboardhomepage/>
-     </div>
-     </div>
-</div>  
-<div>
-   <Navbar/>
-     <div class="container-fluid" id="main">
-     <div class="row row-offcanvas row-offcanvas-left">
-     <Sidebar/>
-     <TrailDone/>
-     </div>
-     </div>
-</div>  
-<div>
-   <Navbar/>
-     <div class="container-fluid" id="main">
-     <div class="row row-offcanvas row-offcanvas-left">
-     <Sidebar/>
-     <Bookdate/>
-     </div>
-     </div>
-</div>  
-<div>
-   <Navbar/>
-     <div class="container-fluid" id="main">
-     <div class="row row-offcanvas row-offcanvas-left">
-     <Sidebar/>
-     <BookingSummary/>
-     </div>
-     </div>
-</div>  
-<div>
-   <Navbar/>
-     <div class="container-fluid" id="main">
-     <div class="row row-offcanvas row-offcanvas-left">
-     <Sidebar/>
-     <Classhistory/>
-     </div>
-     </div>
-</div> 
-<div>
-   <Navbar/>
-     <div class="container-fluid" id="main">
-     <div class="row row-offcanvas row-offcanvas-left">
-     <Sidebar/>
-     <Videolearn/>
-     </div>
-     </div>
-</div> 
-<div>
-   <Navbar/>
-     <div class="container-fluid" id="main">
-     <div class="row row-offcanvas row-offcanvas-left">
-     <Sidebar/>
-     <ChoosePlan/>
-     </div>
-     </div>
-</div> 
-<div>
-   <Navbar/>
-     <div class="container-fluid" id="main">
-     <div class="row row-offcanvas row-offcanvas-left">
-     <Sidebar/>
-     <Profile/>
-     </div>
-     </div>
-</div> 
+
 </>
   );
 }
