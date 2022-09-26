@@ -1,9 +1,11 @@
 import React from 'react'
 import Calendar from 'react-calendar'; 
 import { useState } from 'react';
+import Time from './Time';
 
 export default function Bookdate() {
-    const [date, setDate] = useState(new Date())
+const [date, setDate] = useState(new Date());
+const [showTime, setShowTime] = useState(false) 
   return (
    <>
      <div className="col main pt-5 mt-3" style={{backgroundColor:"#EFF3FD"}}>
@@ -22,18 +24,23 @@ export default function Bookdate() {
             </div>
         </div>
         </div>
-        <div className='app'><div>
-             <Calendar onChange={setDate} value={date}/>
-            </div>
+  
+        <div className='app'>
+   
+            <div><Calendar onChange={setDate} value={date} onClickDay={() => setShowTime(true)}/></div>
 
-            {date.length > 0 ? (
-        <p><span>Start:</span>{date[0].toDateString()}&nbsp; &nbsp; <span>End:</span>{date[1].toDateString()}</p>
+                {date.length > 0 ? (
+   <p><span>Start:</span>{date[0].toDateString()}&nbsp;&nbsp;<span>End:</span>{date[1].toDateString()}</p>
           ) : (
-        <p className='my-3 mx-3 text-danger font-weight-bold'><span> Selected date:</span>&nbsp;{date.toDateString()}</p> 
+   <p className='my-3 mx-3 fw-bold'><span className='mx-3 my-3'>Default selected date:</span>{date.toDateString()}</p> 
           )
-             }
-        </div>
-        
+   }
+    <p className='my-3 mx-3 fw-bold'><span className='mx-3 my-3'>Select the Time Slot</span>
+    
+   <Time showTime={showTime} date={date}/></p>
+
+      </div>
+
  </div>
         
  
