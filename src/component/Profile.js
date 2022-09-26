@@ -6,6 +6,7 @@ export default function Profile() {
         <div class="card mx-3">
             <div class="card-body">
             <div class="row g-3 ">
+            <div ><button className="btn text-white "style={{marginLeft:"1020px" , backgroundColor:"#8DDDB7"}}>Save</button></div>
                          <div class="col d-flex ">
                             <label className='my-3  fw-bold'>Email</label>
                             <input type="email"  className="form-control mx-3" style={{backgroundColor:"#F2F1F1"}} placeholder="admin@admin.com" aria-label="Email"/>
@@ -14,6 +15,9 @@ export default function Profile() {
                              <label className='my-3  fw-bold'>Country</label>
                          <input type="text"  className="form-control mx-3 "     style={{backgroundColor:"#F2F1F1"}}    placeholder="admin@admin.com" aria-label="Country"/>
                         </div>
+                      
+                        
+                       
   
             </div>
             <div class="row g-3 my-3">
@@ -42,7 +46,7 @@ export default function Profile() {
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4 my-3">
                 <div class="col">
-                    <div class="card mx-3" style={{height: "286px" ,  width: "327px" ,borderRadius: "16px"}}>
+                    s<div class="card mx-3" style={{height: "286px" ,  width: "327px" ,borderRadius: "16px"}}>
                       <div class="card-body">
                         <h5 class="card-title my-3" style={{fontWeight:"700" , fontSize:"28px"}}>Update Password</h5>
                         <div style={{marginTop:"40px"}}> 
