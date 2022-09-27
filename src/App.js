@@ -16,6 +16,8 @@ import Videolearn from './component/Videolearn';
 import ChoosePlan from './component/ChoosePlan';
 import Profile from './component/Profile';
 import Checkout from './component/Checkout';
+import Time from './component/Time';
+import {DateTimePickerComponent} from '@syncfusion/ej2-react-calendars'
 
 
 function App() {
@@ -23,29 +25,22 @@ function App() {
   return (
     <>
     <Navbar/>
-   
-      <div className='container-fluid row row-offcanvas row-offcanvas-left' id='main'><Sidebar/> <Dashboard/> </div>
-
-      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/><Dashboardhomepage/></div>
-
-      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <TrailDone/></div>
-
-    <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <Bookdate/></div>
-
-    <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <BookingSummary/></div>
-
-    <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <Classhistory/></div>
-
-     <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <Videolearn/></div>
-
-      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <ChoosePlan/></div>
-
-      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Sidebar/> <Profile/></div>
-
-      <div className="container-fluid row row-offcanvas row-offcanvas-left" id="main"> <Checkout/></div>
-
+    <Router>
+      <Routes>
+      <Route path='/' element={<Dashboard/>} />
+      <Route path='/dashboardhomepage' element={<Dashboardhomepage/>} />
+      <Route path='/traildone' element={<TrailDone/>} />
+      <Route path='/bookdate' element={<Bookdate/>} />
+      <Route path='/bookingsummary' element={<BookingSummary/>} />
+      <Route path='/classhistory' element={<Classhistory/>} />
+      <Route path='/videolearn' element={<Videolearn/>} />
+      <Route path='/chooseplan' element={<ChoosePlan/>} />
+      <Route path='/profile' element={<Profile/>} />
+      
   
-
+      </Routes>
+    </Router>
+    
 </>
   );
 }
